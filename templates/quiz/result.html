@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+    <style>
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Score: {{ score }} out of {{ total_questions }}</h1>
+    <h2>Explanations:</h2>
+    <ul>
+        {% for result in results %}
+            <li>
+                <strong>Question:</strong> {{ result.question.question_text }}<br>
+                <strong>Your Answer:</strong> 
+                {% if result.selected_answer %}
+                    <span class="{% if result.selected_answer.is_correct %}correct{% else %}incorrect{% endif %}">
+                        {{ result.selected_answer.answer_text }}
+                    </span>
+                {% else %}
+                    <span class="incorrect">No answer selected</span>
+                {% endif %}
+                <br>
+                <strong>Correct Answer:</strong> 
+                <span class="correct">{{ result.correct_answer.answer_text }}</span><br>
+                <strong>Explanation:</strong> {{ result.explanation }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'quiz' %}">Try Again</a>
+</body>
+</html>

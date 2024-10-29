@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MCQ Quiz</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>MCQ Quiz</h1>
+    <form id="quiz-form">
+        {% csrf_token %}
+        {% for question in questions %}
+            <h3>{{ question.question_text }}</h3>
+            {% for answer in question.answer_set.all %}
+                <label>
+                    <input type="radio" name="question_{{ question.id }}" value="{{ answer.id }}" class="answer-option" data-question-id="{{ question.id }}">
+                    {{ answer.answer_text }}
+                </label><br>
+            {% endfor %}
+            <div class="result" id="result-{{ question.id }}" style="display:none;"></div>
+        {% endfor %}
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $('.answer-option').change(function() {
+                var selectedAnswerId = $(this).val();
+                var questionId = $(this).data('question-id');
+
+                $.ajax({
+                    url: "{% url 'check_answer' %}",
+                    method: "POST",
+                    data: {
+                        'question_id': questionId,
+                        'selected_answer_id': selectedAnswerId,
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    success: function(data) {
+                        var resultDiv = $('#result-' + questionId);
+                        resultDiv.show();
+                        if (data.is_correct) {
+                            resultDiv.html('<span style="color: green;">Correct! ' + data.explanation + '</span>');
+                        } else {
+                            resultDiv.html('<span style="color: red;">Incorrect! The correct answer is: ' + data.correct_answer + '. ' + data.explanation + '</span>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

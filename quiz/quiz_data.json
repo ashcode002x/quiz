@@ -1,0 +1,234 @@
+{
+  "quiz_results": [
+      {
+        "question": "Which of the following fall(s) under the “essential characteristics” of cloud computing?",
+        "options": [
+          {
+            "option": "A",
+            "text": "Resource Pooling",
+            "is_correct": true
+          },
+          {
+            "option": "B",
+            "text": "Measured Service",
+            "is_correct": true
+          },
+          {
+            "option": "C",
+            "text": "Rapid Elasticity",
+            "is_correct": true
+          },
+          {
+            "option": "D",
+            "text": "Latency",
+            "is_correct": false
+          }
+        ],
+        "explanation": "A, B, and C are essential characteristics of cloud computing, while Latency is not."
+      },
+      {
+        "question": "“Google Doc” is an example of",
+        "options": [
+          {
+            "option": "A",
+            "text": "PaaS",
+            "is_correct": false
+          },
+          {
+            "option": "B",
+            "text": "IaaS",
+            "is_correct": false
+          },
+          {
+            "option": "C",
+            "text": "SaaS",
+            "is_correct": true
+          },
+          {
+            "option": "D",
+            "text": "FaaS",
+            "is_correct": false
+          }
+        ],
+        "explanation": "C is correct because Google Docs is a Software as a Service (SaaS)."
+      },
+      {
+        "question": "Business-Process-as-a-Service is not a part of XaaS.",
+        "options": [
+          {
+            "option": "A",
+            "text": "True",
+            "is_correct": false
+          },
+          {
+            "option": "B",
+            "text": "False",
+            "is_correct": true
+          }
+        ],
+        "explanation": "B is correct because BPaaS is a part of the XaaS framework."
+      },
+      {
+        "question": "Network Function Virtualization involves the implementation of _______ function in software that can run on a range of industry-standard servers ______________.",
+        "options": [
+          {
+            "option": "A",
+            "text": "network, software",
+            "is_correct": false
+          },
+          {
+            "option": "B",
+            "text": "hardware, software",
+            "is_correct": false
+          },
+          {
+            "option": "C",
+            "text": "hardware, network",
+            "is_correct": false
+          },
+          {
+            "option": "D",
+            "text": "network, hardware",
+            "is_correct": true
+          }
+        ],
+        "explanation": "D is correct; NFV implements network functions in software to run on standard hardware."
+      },
+      {
+        "question": "Which are the following applications for SaaS (Software as a Service) architecture?",
+        "options": [
+          {
+            "option": "A",
+            "text": "Billing software",
+            "is_correct": true
+          },
+          {
+            "option": "B",
+            "text": "CRM",
+            "is_correct": true
+          },
+          {
+            "option": "C",
+            "text": "App engines",
+            "is_correct": false
+          },
+          {
+            "option": "D",
+            "text": "None of above",
+            "is_correct": false
+          }
+        ],
+        "explanation": "A and B are correct as they are common applications of SaaS architecture."
+      },
+      {
+        "question": "Web access to commercial software is one of the SaaS characteristics in the cloud computing paradigm.",
+        "options": [
+          {
+            "option": "A",
+            "text": "True",
+            "is_correct": true
+          },
+          {
+            "option": "B",
+            "text": "False",
+            "is_correct": false
+          }
+        ],
+        "explanation": "A is correct; web access is a key characteristic of SaaS."
+      },
+      {
+        "question": "In the case of the client-server model: Statement (i) Virtualization is a core concept; Statement (ii) system can scale infinitely.",
+        "options": [
+          {
+            "option": "A",
+            "text": "Only Statement (i) is correct",
+            "is_correct": false
+          },
+          {
+            "option": "B",
+            "text": "Only Statement (ii) is correct",
+            "is_correct": false
+          },
+          {
+            "option": "C",
+            "text": "Both Statements (i) and (ii) are correct",
+            "is_correct": false
+          },
+          {
+            "option": "D",
+            "text": "None of the statements is correct",
+            "is_correct": true
+          }
+        ],
+        "explanation": "D is correct; neither statement accurately describes the client-server model."
+      },
+      {
+        "question": "Client-server model is always load-balanced.",
+        "options": [
+          {
+            "option": "A",
+            "text": "True",
+            "is_correct": false
+          },
+          {
+            "option": "B",
+            "text": "False",
+            "is_correct": true
+          }
+        ],
+        "explanation": "B is correct; the client-server model does not guarantee load balancing."
+      },
+      {
+        "question": "PaaS (Platform as a Service) brings the benefits: (i) Creation of software (ii) Integration of web services and databases.",
+        "options": [
+          {
+            "option": "A",
+            "text": "Only (i)",
+            "is_correct": false
+          },
+          {
+            "option": "B",
+            "text": "Only (ii)",
+            "is_correct": false
+          },
+          {
+            "option": "C",
+            "text": "Both (i) and (ii)",
+            "is_correct": true
+          },
+          {
+            "option": "D",
+            "text": "Neither (i) nor (ii)",
+            "is_correct": false
+          }
+        ],
+        "explanation": "C is correct; PaaS enables both software creation and integration."
+      },
+      {
+        "question": "Which of the following is false?",
+        "options": [
+          {
+            "option": "a",
+            "text": "Private cloud is dedicated solely to an organization.",
+            "is_correct": true
+          },
+          {
+            "option": "b",
+            "text": "Community cloud is a composition of public and private cloud.",
+            "is_correct": false
+          },
+          {
+            "option": "c",
+            "text": "Public cloud is available to the general public.",
+            "is_correct": true
+          },
+          {
+            "option": "d",
+            "text": "None of these.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "B is false because a community cloud is shared by multiple organizations, combining elements of both public and private clouds."
+      }
+    ]
+}
